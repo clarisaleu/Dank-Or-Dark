@@ -1,4 +1,15 @@
-alert("hi");
+//Changes
+var memeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
+var randomMemeLink = randomNumberFromRange(0, memeArray.length);
+$.getJSON(memeArray[randomMemeLink], function (data) {
+var randomNumber = randomNumberFromRange(0, data.data.children.length);
+$('<img/>').attr('src', data.data.children[randomNumber].data.url)
+                    .width(500)
+                    .appendTo('#images');
+});
+
+
+
 
 
 //Pull a random image
