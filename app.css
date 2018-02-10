@@ -1,9 +1,14 @@
+h1 {
+    margin-top: 0;
+}
+
 body{
 	background: black;
-	padding-top: 30px;
+	padding-top: 0px;
 	font-family: Raleway;
 	text-align: center;
 	color: white;
+	margin-top: 0px;
 }
 
 .spec{
@@ -12,9 +17,18 @@ body{
 	background-color: black;
 }
 
+.pagehead{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-weight: bold;
+	font-size: 50px;
+	background: #1F1F1F;
+	margin-bottom: 20px;
+	text-align: center;
+}
 
 .content{
-	padding-top: 25%;
+	padding-top: 15px;
 }
 
 .divider{
@@ -45,8 +59,27 @@ body{
 }
 
 .footer {
-    background: rgba(0, 0, 0, 0.91);
-    height: 60px;
+		padding-top: 5px;
+    background: #1F1F1F;
+    height: 90px;
     margin: auto;
     width: 100%;
+}
+
+.img {}
+
+.space{
+	margin-bottom: 110px;
+}
+
+.caption{
+		margin-top: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+		display: inline-block;
+		background-color: #1F1F1F;
+		font-size: 16px;
+		font-style: italic;
 }
