@@ -1,4 +1,5 @@
 //Changes
+function loadImageDank(){
 var memeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
 var randomMemeLink = randomNumberFromRange(0, memeArray.length);
 $.getJSON(memeArray[randomMemeLink], function (data) {
@@ -7,21 +8,12 @@ $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .width(500)
                     .appendTo('#images');
 });
+};
 
-
-
-
-
-//Pull a random image
-$.getJSON('https://www.reddit.com/r/Memes_Of_The_Dank/.json', function (data) {
-//Generate random number from 0-size of array
-var randomNumber = randomNumberFromRange(0, data.data.children.length);
- $('<img/>').attr('src', data.data.children[randomNumber].data.url).width(500).appendTo('#images');
-});
 
 function randomNumberFromRange(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
-}
+};
 
 
 //Check Validity of URL
@@ -34,4 +26,4 @@ function IsValidImageUrl(url, callback) {
         callback(url, true);
     };
     img.src = url;
-}
+};
