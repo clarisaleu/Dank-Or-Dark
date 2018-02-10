@@ -11,6 +11,11 @@ function loadImageDank(){
   });
 }
 
+//generates random number
+function randomNumberFromRange(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 
 //Check Validity of URL
 function IsValidImageUrl(url, callback) {
