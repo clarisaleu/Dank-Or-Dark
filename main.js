@@ -1,3 +1,6 @@
+alert("hi");
+
+
 //Pull a random image
 $.getJSON('https://www.reddit.com/r/Memes_Of_The_Dank/.json', function (data) {
 //Generate random number from 0-size of array
