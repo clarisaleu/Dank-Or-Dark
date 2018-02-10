@@ -25,6 +25,7 @@ body{
 	background: #1F1F1F;
 	margin-bottom: 20px;
 	text-align: center;
+	border-bottom: 1px solid white;
 }
 
 .content{
@@ -33,7 +34,7 @@ body{
 
 .divider{
     width:10px;
-    height:auto;
+    height:0px;
     display:inline-block;
 }
 
@@ -42,12 +43,61 @@ body{
     border: 1px solid white;
 		border-radius: 2px;
     color: white;
-    padding: 15px 48px;
+    padding: 20px 48px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+		vertical-align: top;
     font-size: 20px;
 		width: 250px;
+		height: 70px;
+		margin-bottom: 10px
+}
+
+
+.button_twitter {
+		background-image: url(http://www.nmafbs.org/wp-content/uploads/2018/01/twitter-2012-negative-logo-5C6C1F1521-seeklogo.com_.png);
+		background-size: 80px 80px;
+		vertical-align: top;
+		border: 1px solid white;
+		border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+		width: 74px;
+		height: 70px;
+		background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button_facebook {
+		background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/1000px-F_icon.svg.png);
+		background-size: 80px 80px;
+		border: 1px solid white;
+		border-radius: 2px;
+    color: white;
+    display: inline-block;
+		vertical-align: top;
+    font-size: 20px;
+		width: 73px;
+		height: 70px;
+		background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button_tumblr {
+		background-image: url(https://seeklogo.com/images/T/tumblr-icon-logo-A03D0E7D3A-seeklogo.com.png);
+		background-size: 80px 80px;
+		border: 1px solid white;
+		border-radius: 2px;
+    color: white;
+		display: inline-block;
+		vertical-align: top;
+    font-size: 20px;
+		width: 73px;
+		height: 70px;
+		background-repeat: no-repeat;
+    background-position: center;
 }
 
 .footerholder {
@@ -56,6 +106,7 @@ body{
     position: fixed;
     text-align: center;
     width: 100%;
+		border-top: 1px solid white;
 }
 
 .footer {
