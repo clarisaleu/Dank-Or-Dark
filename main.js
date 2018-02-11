@@ -1,3 +1,13 @@
+var dankBtn = document.querySelector("#dank");
+    
+var darkBtn = document.querySelector("#dark");
+
+
+function init(){
+  loadImageDank();
+  
+}
+
 //Changes
 function loadImageDank(){
 var memeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
