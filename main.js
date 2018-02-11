@@ -14,7 +14,7 @@ var randomDankMemeLink = randomNumberFromRange(0, dankMemeArray.length);
 var randomDarkMemeLink = randomNumberFromRange(0, darkMemeArray.length);
 
 
-dankBtn.addEventListener("click",function loadImageDank(){
+dankBtn.addEventListener("click",function loadImageDank()){
  		$.getJSON(memeArray[randomMemeDankLink], function (data) {
  			var randomNumber = randomNumberFromRange(0, data.data.children.length);
  			$('<img/>').attr('src', data.data.children[randomNumber].data.url).width(500).appendTo('#images'); 
@@ -22,7 +22,7 @@ dankBtn.addEventListener("click",function loadImageDank(){
  	});
 
     
-darkBtn.addEventListener("click",function loadImageDark(){
+darkBtn.addEventListener("click",function loadImageDark()){
  		$.getJSON(memeArray[randomMemeDarkLink], function (data) {
  			var randomNumber = randomNumberFromRange(0, data.data.children.length);
  			$('<img/>').attr('src', data.data.children[randomNumber].data.url).width(500).appendTo('#images'); 
