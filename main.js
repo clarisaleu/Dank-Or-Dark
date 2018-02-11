@@ -3,25 +3,20 @@ var dankBtn = document.querySelector("#dank");
 var darkBtn = document.querySelector("#dark");
 
 
-function init(){
-  loadImageDank();
-}
-
-//Changes
-function loadImageDank(){
-var memeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
-var randomMemeLink = randomNumberFromRange(0, memeArray.length);
+dankBtn.addEventListener("click",function loadImageDank()
+  var memeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
+    var randomMemeLink = randomNumberFromRange(0, memeArray.length);
 $.getJSON(memeArray[randomMemeLink], function (data) {
 var randomNumber = randomNumberFromRange(0, data.data.children.length);
 $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .width(500)
-                    .appendTo('#images');
-});
+                    .appendTo('#images'); 
+                        ){
 };
 
-
-function loadImageDark(){
-var memeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json
+    
+darkBtn.addEventListener("click",function loadImageDark()
+ var memeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json
 "];
 var randomMemeLink = randomNumberFromRange(0, memeArray.length);
 $.getJSON(memeArray[randomMemeLink], function (data) {
@@ -29,8 +24,32 @@ var randomNumber = randomNumberFromRange(0, data.data.children.length);
 $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .width(500)
                     .appendTo('#images');
-});
+                        ){
 };
+// //Changes
+// function loadImageDank(){
+// var memeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
+// var randomMemeLink = randomNumberFromRange(0, memeArray.length);
+// $.getJSON(memeArray[randomMemeLink], function (data) {
+// var randomNumber = randomNumberFromRange(0, data.data.children.length);
+// $('<img/>').attr('src', data.data.children[randomNumber].data.url)
+//                     .width(500)
+//                     .appendTo('#images');
+// });
+// };
+
+
+// function loadImageDark(){
+// var memeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json
+// "];
+// var randomMemeLink = randomNumberFromRange(0, memeArray.length);
+// $.getJSON(memeArray[randomMemeLink], function (data) {
+// var randomNumber = randomNumberFromRange(0, data.data.children.length);
+// $('<img/>').attr('src', data.data.children[randomNumber].data.url)
+//                     .width(500)
+//                     .appendTo('#images');
+// });
+// };
 
 
 
