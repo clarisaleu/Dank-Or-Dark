@@ -3,7 +3,7 @@ function randomNumberFromRange(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
 };
 
-
+var image;
 // var dankBtn = $("#dank");    
 // var darkBtn = $("#dark");
 
@@ -39,6 +39,7 @@ var randomMemeLink = randomNumberFromRange(0, memeArray.length);
 $.getJSON(memeArray[randomMemeLink], function (data) {
 var randomNumber = randomNumberFromRange(0, data.data.children.length);
     var imageUrl = data.data.children[randomNumber].data.url;
+    image = imageUrl;
    IsValidImageUrl(imageUrl,function(exists) {
 $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .width(500)
@@ -51,6 +52,7 @@ $('<img/>').attr('src', data.data.children[randomNumber].data.url)
 };
 
 
+
 function loadImageDark(){
     if(document.getElementById("images") != null) {
     $("#images").empty(); 
@@ -60,6 +62,7 @@ var randomMemeLink = randomNumberFromRange(0, memeArray.length);
 $.getJSON(memeArray[randomMemeLink], function (data) {
 var randomNumber = randomNumberFromRange(0, data.data.children.length);
 var imageUrl = data.data.children[randomNumber].data.url;
+    image = imageUrl;
 IsValidImageUrl(imageUrl,function(exists) {
 $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .width(500)
@@ -71,6 +74,9 @@ $('<img/>').attr('src', data.data.children[randomNumber].data.url)
 });        
 };
 
+function getURL(){
+    return image; 
+}
 
 //Check Validity of URL
 function IsValidImageUrl(url, callback) {
