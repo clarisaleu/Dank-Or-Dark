@@ -11,7 +11,7 @@ var randomNumber = randomNumberFromRange(0, data.data.children.length);
 $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .width(500)
                     .appendTo('#images'); 
-                        ){
+                        {
 };
 
     
@@ -24,7 +24,7 @@ var randomNumber = randomNumberFromRange(0, data.data.children.length);
 $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .width(500)
                     .appendTo('#images');
-                        ){
+                        {
 };
 // //Changes
 // function loadImageDank(){
