@@ -10,13 +10,14 @@ function loadImageDank() {
     if(document.getElementById("images") != null) {
     $("#images").empty();
     }
-    var memeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
+    var memeArray = ["https://www.reddit.com/r/Dank/.json", "https://www.reddit.com/r/dank_gifs/.json",
+    "https://www.reddit.com/r/dank_meme/.json", "https://www.reddit.com/r/dankmemes/.json"];
     var randomMemeLink = randomNumberFromRange(0, memeArray.length);
     $.getJSON(memeArray[randomMemeLink], function (data) {
         var randomNumber = randomNumberFromRange(0, data.data.children.length);
         var imageUrl = data.data.children[randomNumber].data.url;
         dankImage = imageUrl;
-        if(dankImage.includes("jpg") || dankImage.includes("jpeg") || dankImage.includes("png")) {
+        if(dankImage.includes("jpg") || dankImage.includes("jpeg") || dankImage.includes("png") || dankImage.includes("gif")) {
         IsValidImageUrl(imageUrl,function(exists) {
             $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .width(500)
@@ -26,8 +27,7 @@ function loadImageDank() {
             }
         });
         } else {
-            alert(dankImage);
-            alert("this was removed");
+            loadImageDank();
         }
    });
 };
@@ -40,7 +40,8 @@ function loadImageDark(){
     }
 
 
-    var memeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json"];
+    var memeArray = ["https://www.reddit.com/r/CoffeeWithJesus/.json", "https://www.reddit.com/r/dark_humor/.json",
+    "https://www.reddit.com/r/Demotivational.json"];
 
    var randomMemeLink = randomNumberFromRange(0, memeArray.length);
     $.getJSON(memeArray[randomMemeLink], function (data) {
@@ -48,7 +49,7 @@ function loadImageDark(){
         var imageUrl = data.data.children[randomNumber].data.url;
         darkImage = imageUrl;
 
-        if(darkImage.includes("jpg") || darkImage.includes("jpeg") || darkImage.includes("png")) {
+        if(darkImage.includes("jpg") || darkImage.includes("jpeg") || darkImage.includes("png") || darkImage.includes("gif")) {
             IsValidImageUrl(imageUrl,function(exists) {
             while(exists.length == null || !exists) {
                alert("hello, invalid type!");
@@ -60,12 +61,49 @@ function loadImageDark(){
 
             });
         } else {
-            alert(darkImage);
-            alert("this was removed");
+            loadImageDark();
         }
 
     });
 };
+
+
+var wholesomeImage;
+
+function loadImageWholesome(){
+    if(document.getElementById("images") != null) {
+        $("#images").empty();
+    }
+
+
+    var memeArray = ["https://www.reddit.com/r/Eyebleach/.json", "https://www.reddit.com/r/ShittyWholesomeMemes/.json",
+    "https://www.reddit.com/r/wholesomebestof/.json", "https://www.reddit.com/r/wholesomedogmemes/.json", "https://www.reddit.com/r/wholesomemes/.json"];
+
+   var randomMemeLink = randomNumberFromRange(0, memeArray.length);
+    $.getJSON(memeArray[randomMemeLink], function (data) {
+        var randomNumber = randomNumberFromRange(0, data.data.children.length);
+        var imageUrl = data.data.children[randomNumber].data.url;
+        wholesomeImage = imageUrl;
+
+        if(wholesomeImage.includes("jpg") || wholesomeImage.includes("jpeg") || wholesomeImage.includes("png") ||
+        wholesomeImage.includes("gif")) {
+            IsValidImageUrl(imageUrl,function(exists) {
+            while(exists.length == null || !exists) {
+               alert("hello, invalid type!");
+               loadImageWholesome();
+            }
+            $('<img/>').attr('src', data.data.children[randomNumber].data.url)
+                        .width(500)
+                        .appendTo('#images');
+
+            });
+        } else {
+            loadImageWholesome();
+        }
+
+    });
+};
+
 
 
 function getURL(){
