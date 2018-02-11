@@ -2,7 +2,8 @@ h1 {
     margin-top: 0;
 }
 
-body{
+
+body {
 	background: black;
 	padding-top: 0px;
 	font-family: Raleway;
@@ -11,13 +12,13 @@ body{
 	margin-top: 0px;
 }
 
-.spec{
+.spec {
 	font-size: 16px;
 	padding: 20px 50px;
 	background-color: black;
 }
 
-.pagehead{
+.pagehead {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	font-weight: bold;
@@ -28,11 +29,11 @@ body{
 	border-bottom: 1px solid white;
 }
 
-.content{
+.content 
 	padding-top: 15px;
 }
 
-.divider{
+.divider {
     width:10px;
     height:0px;
     display:inline-block;
@@ -53,6 +54,7 @@ body{
 		height: 70px;
 		margin-bottom: 10px
 }
+
 #share-buttons img {
 width: 50px;
 padding: 5px;
@@ -80,20 +82,18 @@ display: inline;
 }
 
 .footer {
-		padding-top: 5px;
+    padding-top: 5px;
     background: #1F1F1F;
     height: 90px;
     margin: auto;
     width: 100%;
 }
 
-.img {}
-
-.space{
+.space {
 	margin-bottom: 110px;
 }
 
-.caption{
+.caption {
 		margin-top: 20px;
 		padding-top: 10px;
 		padding-bottom: 10px;
