@@ -6,4 +6,4 @@ Devpost: https://devpost.com/software/dank-or-dark<br>
 
 <hr>
 
-![Scrrenshot](Dank or Dark updated logo.png)
+![Scrrenshot](Dank%20or%20Dark%20updated%20logo.png)
