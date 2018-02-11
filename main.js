@@ -5,7 +5,6 @@ var darkBtn = document.querySelector("#dark");
 
 function init(){
   loadImageDank();
-  
 }
 
 //Changes
@@ -19,6 +18,21 @@ $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .appendTo('#images');
 });
 };
+
+
+function loadImageDark(){
+var memeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json
+"];
+var randomMemeLink = randomNumberFromRange(0, memeArray.length);
+$.getJSON(memeArray[randomMemeLink], function (data) {
+var randomNumber = randomNumberFromRange(0, data.data.children.length);
+$('<img/>').attr('src', data.data.children[randomNumber].data.url)
+                    .width(500)
+                    .appendTo('#images');
+});
+};
+
+
 
 
 function randomNumberFromRange(min,max){
