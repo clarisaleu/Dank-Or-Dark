@@ -7,10 +7,10 @@ function randomNumberFromRange(min,max){
 var dankBtn = document.querySelector("#dank");    
 var darkBtn = document.querySelector("#dark");
 
-var memeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
-var memeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json"];
-var randomDankMemeLink = randomNumberFromRange(0, memeArray.length);
-var randomDarkMemeLink = randomNumberFromRange(0, memeArray.length);
+var dankMemeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
+var darkMemeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json"];
+var randomDankMemeLink = randomNumberFromRange(0, dankMemeArray.length);
+var randomDarkMemeLink = randomNumberFromRange(0, darkMemeArray.length);
 
 dankBtn.addEventListener("click",function loadImageDank(){
  		$.getJSON(memeArray[randomMemeDankLink], function (data) {
