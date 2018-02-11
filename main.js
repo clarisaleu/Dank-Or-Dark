@@ -49,8 +49,7 @@ function loadImageDark(){
     if(document.getElementById("images") != null) {
     $("#images").empty(); 
 }
-var memeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json
-"];
+var memeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json"];
 var randomMemeLink = randomNumberFromRange(0, memeArray.length);
 $.getJSON(memeArray[randomMemeLink], function (data) {
 var randomNumber = randomNumberFromRange(0, data.data.children.length);
