@@ -54,7 +54,7 @@ body{
 		margin-bottom: 10px
 }
 #share-buttons img {
-width: 35px;
+width: 50px;
 padding: 5px;
 border: 0;
 box-shadow: 0;
@@ -64,6 +64,15 @@ display: inline;
 .footerholder {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+		border-top: 1px solid white;
+}
+
+.headerholder {
+    background: none repeat scroll 0 0 transparent;
+    top: 0;
     position: fixed;
     text-align: center;
     width: 100%;
