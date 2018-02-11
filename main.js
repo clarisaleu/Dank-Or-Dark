@@ -38,10 +38,15 @@ var memeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit
 var randomMemeLink = randomNumberFromRange(0, memeArray.length);
 $.getJSON(memeArray[randomMemeLink], function (data) {
 var randomNumber = randomNumberFromRange(0, data.data.children.length);
+   IsValidImageUrl(imageUrl,function(exists) {
 $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .width(500)
                     .appendTo('#images');
-});
+    if(!exists){
+          alert("hello, invalid type!");
+    }
+   });
+   });
 };
 
 
@@ -53,10 +58,16 @@ var memeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddi
 var randomMemeLink = randomNumberFromRange(0, memeArray.length);
 $.getJSON(memeArray[randomMemeLink], function (data) {
 var randomNumber = randomNumberFromRange(0, data.data.children.length);
+var imageUrl = data.data.children[randomNumber].data.url;
+IsValidImageUrl(imageUrl,function(exists) {
 $('<img/>').attr('src', data.data.children[randomNumber].data.url)
                     .width(500)
                     .appendTo('#images');
+    if(!exists){
+        alert("hello, invalid type!");
+    }
 });
+});        
 };
 
 
