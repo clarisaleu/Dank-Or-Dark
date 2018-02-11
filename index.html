@@ -41,7 +41,7 @@
 		</a></p>
 		<p>
 		<a class = "divider"/>
-		<a class = "button" href=image download=image>
+		<a class = "button" href=thisurl download>
 			<b> <font color=#ffcc00> Save </font></b>
 		</a></p>
 </div>
@@ -85,5 +85,8 @@
 	crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="main.js"></script>
+	<script>
+		var thisurl = getURL();
+  document.querySelector("url").innerHTML=thisurl; </script>
 </body>
 </html>
