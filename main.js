@@ -4,7 +4,7 @@ function randomNumberFromRange(min,max){
 };
 
 window.onload=function(){
-var dankBtn = document.getElementById("dank");    
+var dankBtn = document.querySelector("#dank");    
 var darkBtn = document.querySelector("#dark");
 var dankMemeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
 var darkMemeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json"];
