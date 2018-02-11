@@ -1,10 +1,11 @@
 
+//Return Random Number in the range (min,max)
 function randomNumberFromRange(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
 };
 
 
-//Changes
+//Dank Memes
 var dankImage;
 function loadImageDank() {
     if(document.getElementById("images") != null) {
@@ -32,6 +33,7 @@ function loadImageDank() {
    });
 };
 
+//Dark Memes
 var darkImage;
 
 function loadImageDark(){
@@ -68,13 +70,13 @@ function loadImageDark(){
 };
 
 
+//Wholesome Memes
 var wholesomeImage;
 
 function loadImageWholesome(){
     if(document.getElementById("images") != null) {
         $("#images").empty();
     }
-
 
     var memeArray = ["https://www.reddit.com/r/Eyebleach/.json", "https://www.reddit.com/r/ShittyWholesomeMemes/.json",
     "https://www.reddit.com/r/wholesomebestof/.json", "https://www.reddit.com/r/wholesomedogmemes/.json", "https://www.reddit.com/r/wholesomemes/.json"];
@@ -105,7 +107,7 @@ function loadImageWholesome(){
 };
 
 
-
+//Returns URL of current meme
 function getURL(){
     return image; 
 }
