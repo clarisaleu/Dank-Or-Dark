@@ -4,10 +4,12 @@ function randomNumberFromRange(min,max){
 };
 
 
-var dankBtn = $('#dank').get[0];    
-var darkBtn = $('#dark').get[0];
+var dankBtn = $("#dank");    
+var darkBtn = $("#dark");
+
 var dankMemeArray = ["https://www.reddit.com/r/dankmemes/.json", "https://www.reddit.com/r/Memes_Of_The_Dank/.json", "https://www.reddit.com/r/DNM_MEMES/.json"];
 var darkMemeArray = ["https://www.reddit.com/r/Dark_memes/.json", "https://www.reddit.com/r/OffensiveMemes/.json", "https://www.reddit.com/r/ImGoingToHellForThis/.json"];
+
 var randomDankMemeLink = randomNumberFromRange(0, dankMemeArray.length);
 var randomDarkMemeLink = randomNumberFromRange(0, darkMemeArray.length);
 
