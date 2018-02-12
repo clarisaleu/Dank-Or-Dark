@@ -1,7 +1,6 @@
 # Dank Or Dark? 
 <b>Random Meme Generator!</b>
-
-<br><br>
+<br>
 <i>Dank or Dark?</i> is web application for meme lovers using Reddit's API to keep you laughing - and clicking!<br><br>
 Uncommon Hacks 2018!<br><br>
 Check out out website! : https://dankordark.com<br>
