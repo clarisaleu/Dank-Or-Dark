@@ -1,5 +1,5 @@
 # Dank Or Dark? 
-# Random Meme Generator!
+<b>Random Meme Generator!</b>
 
 <br><br>
 <i>Dank or Dark?</i> is web application for meme lovers using Reddit's API to keep you laughing - and clicking!<br><br>
