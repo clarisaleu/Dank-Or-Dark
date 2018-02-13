@@ -146,3 +146,8 @@ function IsValidImageUrl(url, callback) {
     img.src = url;
 };
 
+//Reload
+function reloadPG(){
+    window.location.reload(true);
+}
+
